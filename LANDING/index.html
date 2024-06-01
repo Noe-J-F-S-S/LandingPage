@@ -1,60 +1,102 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta  charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre los beneficios de nuestro producto/servicio y regístrate hoy mismo.">
-    <meta name="keywords" content="producto, servicio, registro, landing page">
     <title>Landing Page - Mi Empresa</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Descubre los beneficios de nuestro producto/servicio y regístrate hoy mismo.">
+    <meta name="keywords" content="producto, servicio, registro, landing page">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a Nuestra Landing Page</h1>
-        <p>Conoce más sobre nuestro producto/servicio</p>
-        <a href="#formulario" class="cta">Regístrate Ahora</a>
+        <nav>
+            <div class="logo">Mi Empresa</div>
+            <ul>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#formulario">Regístrate</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Bienvenido a Nuestra Landing Page</h1>
+            <p>Conoce más sobre nuestro producto/servicio</p>
+            <a href="#formulario" class="cta">Regístrate Ahora</a>
+        </div>
     </header>
 
-    <section id="beneficios">
-        <h2>Beneficios</h2>
-        <p>Descubre los beneficios de nuestro producto/servicio.</p>
-        <!-- Añade más contenido aquí -->
-        <img src="tu-imagen.jpg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
-            <video controls style="max-width: 100%; height: auto;">
-                <source src="tu-video.mp4" type="video/mp4">
-                Tu navegador no soporta la etiqueta de video.
-            </video>
-        
+    <section id="carousel" class="carousel">
+        <div class="slides">
+            <div class="slide active">
+                <img src="media/logopodcast.png" alt="Imagen 1">
+            </div>
+            <div class="slide">
+                <img src="media/p1.jpg" alt="Imagen 2">
+            </div>
+            <div class="slide">
+                <img src="image3.jpg" alt="Imagen 3">
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
     </section>
 
-    <section id="testimonios">
-        <h2>Testimonios</h2>
-        <div class="testimonio">
-            <p>"Este producto cambió mi vida!"</p>
-            <p>- Juan Pérez</p>
-        </div>
-        <div class="testimonio">
-            <p>"Excelente servicio y soporte."</p>
-            <p>- María Gómez</p>
+    <section id="beneficios" class="section">
+        <div class="container">
+            <h2>Beneficios</h2>
+            <p>Descubre los beneficios de nuestro producto/servicio.</p>
+            <div class="beneficios-container">
+                <div class="beneficio">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Beneficio 1</p>
+                </div>
+                <div class="beneficio">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Beneficio 2</p>
+                </div>
+                <div class="beneficio">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Beneficio 3</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="formulario">
-        <h2>Regístrate</h2>
-        <form id="registroForm">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit"><i class="fas fa-paper-plane"></i>Enviar</button>
-        </form>
+    <section id="testimonios" class="section">
+        <div class="container">
+            <h2>Testimonios</h2>
+            <div class="testimonios-container">
+                <div class="testimonio">
+                    <p>"Este producto cambió mi vida!"</p>
+                    <p><strong>Juan Pérez</strong></p>
+                </div>
+                <div class="testimonio">
+                    <p>"Excelente servicio y soporte."</p>
+                    <p><strong>María Gómez</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formulario" class="section">
+        <div class="container">
+            <h2>Regístrate</h2>
+            <form id="registroForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+        <div class="container">
+            <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
     <script src="javascript.js"></script>

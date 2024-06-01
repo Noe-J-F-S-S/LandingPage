@@ -3,17 +3,59 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #333;
 }
 
 header {
-    font-family: 'Roboto', sans-serif;
-    background-color: #4CAF50;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('header-bg.jpg') no-repeat center center/cover;
     color: white;
-    padding: 20px;
+    padding: 100px 0;
     text-align: center;
 }
 
-header .cta {
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.header-content .cta {
     display: inline-block;
     padding: 10px 20px;
     color: #4CAF50;
@@ -21,66 +63,130 @@ header .cta {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-header .cta:hover {
+.header-content .cta:hover {
     background-color: #45a049;
     color: white;
 }
 
-button i {
-    margin-right: 8px;
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
 }
 
-section {
-    padding: 20px;
+.carousel .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel .slide {
+    min-width: 100%;
+    transition: opacity 1s;
+}
+
+.carousel .slide img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
     text-align: center;
 }
 
-#beneficios {
-    background-color: #f2f2f2;
+#beneficios .beneficios-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
-#testimonios {
-    background-color: #ffffff;
-    padding: 20px;
+#beneficios .beneficio {
+    max-width: 300px;
     text-align: center;
 }
 
-.testimonio {
-    margin: 10px 0;
+#beneficios .beneficio i {
+    font-size: 2em;
+    color: #4CAF50;
 }
 
-
-#formulario {
-    background-color: #e7e7e7;
+#testimonios .testimonios-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-form {
+#testimonios .testimonio {
+    max-width: 300px;
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#formulario form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-form label, form input {
+#formulario form label, #formulario form input {
     margin: 10px 0;
+    width: 100%;
+    max-width: 400px;
 }
 
-button {
+#formulario form button {
     padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button:hover {
+#formulario form button:hover {
     background-color: #45a049;
 }
 
 footer {
     background-color: #333;
     color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 10px 0;
 }
